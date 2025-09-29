@@ -76,7 +76,7 @@
                 android:text="" />
         </LinearLayout>
 
-        <!-- Add and Clear buttons -->
+        <!-- Add button -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -87,12 +87,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ADD" />
-
-            <Button
-                android:id="@+id/btnClear"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="CLEAR" />
         </LinearLayout>
 
         <!-- Ordered Items -->
@@ -101,12 +95,24 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-        <!-- Compute button -->
-        <Button
-            android:id="@+id/btnCompute"
-            android:layout_width="wrap_content"
+        <!-- Compute and Clear button -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="COMPUTE" />
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCompute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="COMPUTE" />
+
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CLEAR" />
+        </LinearLayout>
 
         <!-- Total Price -->
         <LinearLayout
