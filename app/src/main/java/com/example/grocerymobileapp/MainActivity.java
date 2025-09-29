@@ -14,8 +14,8 @@ import com.example.grocerymobileapp.Item;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    TextView tvPrice, tvTotalPrice;
-    EditText etItemName, etQuantity;
+    EditText etItemName, etQuantity, etPrice;
+    TextView tvTotalPrice;
     List<Item> orderedItems;
 
     @Override
