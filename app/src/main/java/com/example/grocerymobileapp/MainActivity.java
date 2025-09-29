@@ -30,5 +30,24 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        // Get IDs
+
+        // Init orderedItems as ArrayList
+
+        // Init lvOrderedItems
+
+        // btnAddOnClick, get value from name, quantity and price
+            // Turn input values into Item object
+
+            // Add newItem to orderedItems
+
+            // Update lvOrderedItems
+
+        // btnComputeOnClick, iterate orderedItems to get totalPrice
+            // Display in tvTotalPrice
+
+        // btnClearOnClick, clear orderedItems
+            // Clear lvOrderedItems
     }
 }
