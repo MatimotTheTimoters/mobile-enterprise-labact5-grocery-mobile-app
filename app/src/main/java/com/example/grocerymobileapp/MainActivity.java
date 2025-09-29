@@ -2,6 +2,7 @@ package com.example.grocerymobileapp;
 
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -49,17 +50,33 @@ public class MainActivity extends AppCompatActivity {
         itemAdapter = new ArrayAdapter<Item>(this, R.layout.item_row, orderedItems);
         lvOrderedItems.setAdapter(itemAdapter);
 
-        // btnAddOnClick, get value from name, quantity and price
+        // btnAddOnClick
+        Button btnAdd = (Button) findViewById(R.id.btnAdd);
+        btnAdd.setOnClickListener(view -> {
+            // Get value from name, quantity and price
+
             // Turn input values into Item object
 
             // Add newItem to orderedItems
 
             // Update lvOrderedItems
 
-        // btnComputeOnClick, iterate orderedItems to get totalPrice
-            // Display in tvTotalPrice
+        });
 
-        // btnClearOnClick, clear orderedItems
+        // btnComputeOnClick
+        Button btnCompute = (Button) findViewById(R.id.btnCompute);
+        btnCompute.setOnClickListener(view -> {
+            // Iterate orderedItems to get totalPrice
+
+            // Display in tvTotalPrice
+        });
+
+        // btnClearOnClick
+        Button btnClear = (Button) findViewById(R.id.btnClear);
+        btnClear.setOnClickListener(view -> {
+            // Clear orderedItems
+
             // Clear lvOrderedItems
+        });
     }
 }
