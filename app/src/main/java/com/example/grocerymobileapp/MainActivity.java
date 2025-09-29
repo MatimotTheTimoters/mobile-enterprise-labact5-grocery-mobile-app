@@ -14,6 +14,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.grocerymobileapp.Item;
+import com.example.grocerymobileapp.ItemAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -105,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setListAdapter() {
-        itemAdapter = new ArrayAdapter<Item>(this, R.layout.item_row, orderedItems);
+        itemAdapter = new ItemAdapter(this, R.layout.item_row, (ArrayList<Item>) orderedItems);
         lvOrderedItems.setAdapter(itemAdapter);
     }
 }
