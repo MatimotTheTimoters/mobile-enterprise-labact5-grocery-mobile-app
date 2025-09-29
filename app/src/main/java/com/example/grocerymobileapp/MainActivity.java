@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     ListView lvOrderedItems;
     TextView tvTotalPrice;
     List<Item> orderedItems;
+    ArrayAdapter<Item> itemAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,13 +94,18 @@ public class MainActivity extends AppCompatActivity {
         Button btnClear = (Button) findViewById(R.id.btnClear);
         btnClear.setOnClickListener(view -> {
             // Clear orderedItems
+            orderedItems.clear();
 
             // Clear lvOrderedItems
+            setListAdapter();
+
+            // Clear totalPrice
+            tvTotalPrice.setText("0.0");
         });
     }
 
     public void setListAdapter() {
-        ArrayAdapter<Item> itemAdapter = new ArrayAdapter<Item>(this, R.layout.item_row, orderedItems);
+        itemAdapter = new ArrayAdapter<Item>(this, R.layout.item_row, orderedItems);
         lvOrderedItems.setAdapter(itemAdapter);
     }
 }
