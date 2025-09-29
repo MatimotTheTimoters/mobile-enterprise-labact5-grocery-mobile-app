@@ -1,6 +1,8 @@
 package com.example.grocerymobileapp;
 
 import android.os.Bundle;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,7 +10,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.grocerymobileapp.Item;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
+    TextView tvPrice, tvTotalPrice;
+    EditText etItemName, etQuantity;
+    List<Item> orderedItems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
