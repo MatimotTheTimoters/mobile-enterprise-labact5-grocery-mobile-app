@@ -1,6 +1,7 @@
 package com.example.grocerymobileapp;
 
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -43,7 +44,10 @@ public class MainActivity extends AppCompatActivity {
         // Init orderedItems as ArrayList
         orderedItems = new ArrayList<>();
 
-        // Init lvOrderedItems
+        // Init lvOrderedItems (can also be used to update when btnAddOnClick)
+        ArrayAdapter<Item> itemAdapter;
+        itemAdapter = new ArrayAdapter<Item>(this, R.layout.item_row, orderedItems);
+        lvOrderedItems.setAdapter(itemAdapter);
 
         // btnAddOnClick, get value from name, quantity and price
             // Turn input values into Item object
