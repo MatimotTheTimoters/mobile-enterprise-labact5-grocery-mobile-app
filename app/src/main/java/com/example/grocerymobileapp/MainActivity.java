@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
             double price = Double.parseDouble(etPrice.getText().toString());
 
             // Turn input values into Item object
-            Item newItem = new Item(itemName, price);
+            Item newItem = new Item(itemName, quantity, price);
 
             // Add newItem to orderedItems
             orderedItems.add(newItem);
@@ -69,9 +69,24 @@ public class MainActivity extends AppCompatActivity {
         // btnComputeOnClick
         Button btnCompute = (Button) findViewById(R.id.btnCompute);
         btnCompute.setOnClickListener(view -> {
-            // Iterate orderedItems to get totalPrice
+            double totalPrice = 0;
 
-            // Display in tvTotalPrice
+            // Iterate orderedItems to get totalPrice
+            for (Item currentItem: orderedItems) {
+                // Get price and quantity for each item
+                int quantity = currentItem.getQuantity();
+                double price = currentItem.getPrice();
+
+                // Compute to get itemTotalPrice
+                double itemTotalPrice = quantity * price;
+
+                // Append to totalPrice
+                totalPrice += itemTotalPrice;
+
+                // Display in tvTotalPrice
+                tvTotalPrice.setText(String.valueOf(totalPrice));
+            }
+
         });
 
         // btnClearOnClick
