@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
         // btnComputeOnClick
         Button btnCompute = (Button) findViewById(R.id.btnCompute);
         btnCompute.setOnClickListener(view -> {
-            double totalPrice = 0;
+            double totalPrice = 0.0;
 
             // Iterate orderedItems to get totalPrice
             for (Item currentItem : orderedItems) {
@@ -93,11 +93,10 @@ public class MainActivity extends AppCompatActivity {
 
                 // Append to totalPrice
                 totalPrice += itemTotalPrice;
-
-                // Display in tvTotalPrice
-                tvTotalPrice.setText(String.valueOf(totalPrice));
             }
 
+            // Display in tvTotalPrice
+            tvTotalPrice.setText(String.valueOf(totalPrice));
         });
 
         // btnClearOnClick
