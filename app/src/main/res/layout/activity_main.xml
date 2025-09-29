@@ -93,18 +93,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="CLEAR" />
-
-            <Button
-                android:id="@+id/btnCompute"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="COMPUTE" />
         </LinearLayout>
 
         <!-- Ordered Items -->
         <ListView
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/btnCompute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="COMPUTE" />
 
         <!-- Total Price -->
         <LinearLayout
@@ -117,6 +117,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Total Price: " />
+
             <TextView
                 android:id="@+id/tvTotalPrice"
                 android:layout_width="match_parent"
