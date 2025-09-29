@@ -38,11 +38,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Get IDs
-        etItemName = (EditText) findViewById(R.id.etItemName);
-        etQuantity = (EditText) findViewById(R.id.etQuantity);
-        etPrice = (EditText) findViewById(R.id.etPrice);
-        lvOrderedItems = (ListView) findViewById(R.id.lvOrderedItems);
-        tvTotalPrice = (TextView) findViewById(R.id.tvTotalPrice);
+        assignIDs();
 
         // Init orderedItems as ArrayList
         orderedItems = new ArrayList<>();
@@ -50,6 +46,19 @@ public class MainActivity extends AppCompatActivity {
         // Init lvOrderedItems (can also be used to update when btnAddOnClick)
         setListAdapter();
 
+        // Set onClick event listeners
+        setOnClickListeners();
+    }
+
+    public void assignIDs() {
+        etItemName = (EditText) findViewById(R.id.etItemName);
+        etQuantity = (EditText) findViewById(R.id.etQuantity);
+        etPrice = (EditText) findViewById(R.id.etPrice);
+        lvOrderedItems = (ListView) findViewById(R.id.lvOrderedItems);
+        tvTotalPrice = (TextView) findViewById(R.id.tvTotalPrice);
+    }
+
+    public void setOnClickListeners() {
         // btnAddOnClick
         Button btnAdd = (Button) findViewById(R.id.btnAdd);
         btnAdd.setOnClickListener(view -> {
@@ -74,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
             double totalPrice = 0;
 
             // Iterate orderedItems to get totalPrice
-            for (Item currentItem: orderedItems) {
+            for (Item currentItem : orderedItems) {
                 // Get price and quantity for each item
                 int quantity = currentItem.getQuantity();
                 double price = currentItem.getPrice();
