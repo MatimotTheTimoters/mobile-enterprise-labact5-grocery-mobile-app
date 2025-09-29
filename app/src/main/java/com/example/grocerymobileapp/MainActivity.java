@@ -58,6 +58,12 @@ public class MainActivity extends AppCompatActivity {
         tvTotalPrice = (TextView) findViewById(R.id.tvTotalPrice);
     }
 
+    public void clearInputFields() {
+        etItemName.setText("");
+        etQuantity.setText("");
+        etPrice.setText("");
+    }
+
     public void setOnClickListeners() {
         // btnAddOnClick
         Button btnAdd = (Button) findViewById(R.id.btnAdd);
@@ -75,6 +81,9 @@ public class MainActivity extends AppCompatActivity {
 
             // Update lvOrderedItems
             setListAdapter();
+
+            // Clear input
+            clearInputFields();
         });
 
         // btnComputeOnClick
