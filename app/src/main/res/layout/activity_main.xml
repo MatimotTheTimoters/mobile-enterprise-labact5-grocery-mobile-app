@@ -13,6 +13,31 @@
         android:layout_height="wrap_content"
         android:layout_margin="32dp"
         android:orientation="vertical">
+        <!-- Title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/ivLogoIcon"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:srcCompat="@mipmap/logo"
+                android:contentDescription="Logo" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Grocery Items Calculator"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
         <!-- Name -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,7 +48,8 @@
                 android:id="@+id/tvItemNameLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Item Name: " />
+                android:text="Item Name: "
+                android:textStyle="bold"/>
 
             <EditText
                 android:id="@+id/etItemName"
@@ -44,7 +70,8 @@
                 android:id="@+id/tvQuantityLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Quantity: " />
+                android:text="Quantity: "
+                android:textStyle="bold"/>
 
             <EditText
                 android:id="@+id/etQuantity"
@@ -65,7 +92,8 @@
                 android:id="@+id/tvPriceLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Price: " />
+                android:text="Price: "
+                android:textStyle="bold"/>
 
             <EditText
                 android:id="@+id/etPrice"
@@ -125,7 +153,8 @@
                 android:id="@+id/tvTotalPriceLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Total Price: " />
+                android:text="Total Price: "
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/tvTotalPrice"
