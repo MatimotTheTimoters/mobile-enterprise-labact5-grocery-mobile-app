@@ -67,11 +67,13 @@
                 android:layout_height="wrap_content"
                 android:text="Price: " />
 
-            <TextView
-                android:id="@+id/tvPrice"
+            <EditText
+                android:id="@+id/etPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="[price]" />
+                android:ems="10"
+                android:inputType="text"
+                android:text="" />
         </LinearLayout>
 
         <!-- Add, Clear and Compute buttons -->
