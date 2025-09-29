@@ -32,6 +32,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Get IDs
+        etItemName = (EditText) findViewById(R.id.etItemName);
+        etQuantity = (EditText) findViewById(R.id.etQuantity);
+        etPrice = (EditText) findViewById(R.id.etPrice);
+        lvOrderedItems = (ListView) findViewById(R.id.lvOrderedItems);
+        tvTotalPrice = (TextView) findViewById(R.id.tvTotalPrice);
 
         // Init orderedItems as ArrayList
 
