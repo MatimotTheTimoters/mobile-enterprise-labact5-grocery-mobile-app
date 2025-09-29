@@ -1,6 +1,7 @@
 package com.example.grocerymobileapp;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -15,10 +16,15 @@ public class ItemAdapter extends ArrayAdapter<Item> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup container) {
+        if (convertView == null) {
+            convertView = LayoutInflater.from(getContext())
+                    .inflate(R.layout.item_row, container, false);
+        }
+
         Item item = getItem(position);
-        TextView tvName = convertView.findViewById(R.id.tvItemName);
-        TextView tvQuantity = convertView.findViewById(R.id.tvQuantity);
-        TextView tvPrice = convertView.findViewById(R.id.tvPrice);
+        TextView tvName = (TextView) convertView.findViewById(R.id.tvItemName);
+        TextView tvQuantity = (TextView) convertView.findViewById(R.id.tvQuantity);
+        TextView tvPrice = (TextView) convertView.findViewById(R.id.tvPrice);
 
         tvName.setText(item.getName());
         tvQuantity.setText(String.valueOf(item.getQuantity()));
