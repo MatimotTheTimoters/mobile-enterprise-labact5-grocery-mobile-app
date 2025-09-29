@@ -2,6 +2,7 @@ package com.example.grocerymobileapp;
 
 import android.os.Bundle;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -15,6 +16,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     EditText etItemName, etQuantity, etPrice;
+    ListView lvOrderedItems;
     TextView tvTotalPrice;
     List<Item> orderedItems;
 

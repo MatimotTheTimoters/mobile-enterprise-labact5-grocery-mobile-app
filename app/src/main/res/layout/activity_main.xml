@@ -76,7 +76,7 @@
                 android:text="" />
         </LinearLayout>
 
-        <!-- Add, Clear and Compute buttons -->
+        <!-- Add and Clear buttons -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -97,9 +97,11 @@
 
         <!-- Ordered Items -->
         <ListView
+            android:id="@+id/lvOrderedItems"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
+        <!-- Compute button -->
         <Button
             android:id="@+id/btnCompute"
             android:layout_width="wrap_content"
