@@ -46,21 +46,24 @@ public class MainActivity extends AppCompatActivity {
         orderedItems = new ArrayList<>();
 
         // Init lvOrderedItems (can also be used to update when btnAddOnClick)
-        ArrayAdapter<Item> itemAdapter;
-        itemAdapter = new ArrayAdapter<Item>(this, R.layout.item_row, orderedItems);
-        lvOrderedItems.setAdapter(itemAdapter);
+        setListAdapter();
 
         // btnAddOnClick
         Button btnAdd = (Button) findViewById(R.id.btnAdd);
         btnAdd.setOnClickListener(view -> {
             // Get value from name, quantity and price
+            String itemName = etItemName.getText().toString();
+            int quantity = Integer.parseInt(etQuantity.getText().toString());
+            double price = Double.parseDouble(etPrice.getText().toString());
 
             // Turn input values into Item object
+            Item newItem = new Item(itemName, price);
 
             // Add newItem to orderedItems
+            orderedItems.add(newItem);
 
             // Update lvOrderedItems
-
+            setListAdapter();
         });
 
         // btnComputeOnClick
@@ -78,5 +81,10 @@ public class MainActivity extends AppCompatActivity {
 
             // Clear lvOrderedItems
         });
+    }
+
+    public void setListAdapter() {
+        ArrayAdapter<Item> itemAdapter = new ArrayAdapter<Item>(this, R.layout.item_row, orderedItems);
+        lvOrderedItems.setAdapter(itemAdapter);
     }
 }
