@@ -12,6 +12,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.grocerymobileapp.Item;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -39,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         tvTotalPrice = (TextView) findViewById(R.id.tvTotalPrice);
 
         // Init orderedItems as ArrayList
+        orderedItems = new ArrayList<>();
 
         // Init lvOrderedItems
 
